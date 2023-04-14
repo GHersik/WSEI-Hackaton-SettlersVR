@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_avatars:
-  - m_skeletalMesh: {fileID: 2093884917}
+  - m_skeletalMesh: {fileID: 0}
     m_primarySensorSetup:
       m_profile: {fileID: 11400000, guid: 83a73fa77e599d8438c9f20359a12a5f, type: 2}
       m_origin: {fileID: 2099808121}
@@ -166,8 +166,9 @@ MonoBehaviour:
     m_isReplay: 0
     m_isRemote: 0
     m_isPhysical: 0
+    m_isMirror: 0
     m_avatarID: 23870
-  - m_skeletalMesh: {fileID: 444047143}
+  - m_skeletalMesh: {fileID: 0}
     m_primarySensorSetup:
       m_profile: {fileID: 11400000, guid: 83a73fa77e599d8438c9f20359a12a5f, type: 2}
       m_origin: {fileID: 2099808121}
@@ -180,6 +181,7 @@ MonoBehaviour:
     m_isReplay: 0
     m_isRemote: 0
     m_isPhysical: 0
+    m_isMirror: 0
     m_avatarID: 23870
   - m_skeletalMesh: {fileID: 1511882370}
     m_primarySensorSetup:
@@ -194,6 +196,7 @@ MonoBehaviour:
     m_isReplay: 0
     m_isRemote: 0
     m_isPhysical: 0
+    m_isMirror: 0
     m_avatarID: 23870
   - m_skeletalMesh: {fileID: 210526545}
     m_primarySensorSetup:
@@ -208,6 +211,7 @@ MonoBehaviour:
     m_isReplay: 0
     m_isRemote: 0
     m_isPhysical: 0
+    m_isMirror: 0
     m_avatarID: 23870
   m_globalGraspInteractionSettings:
     m_graspButton: 1
@@ -242,12 +246,6 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 6395279562084881849, guid: 356bb87c64b2fee4aa00222c62c4d5d8,
     type: 3}
   m_PrefabInstance: {fileID: 6395279562026972392}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &444047143 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8712673195293598164, guid: 52011c00fa119c6438ae8d5c3b059b45,
-    type: 3}
-  m_PrefabInstance: {fileID: 8723016374022792065}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &665550904
 GameObject:
@@ -315,12 +313,6 @@ SkinnedMeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 6395279562026972392}
   m_PrefabAsset: {fileID: 0}
---- !u!137 &2093884917 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8712650460662602629, guid: 52011c00fa119c6438ae8d5c3b059b45,
-    type: 3}
-  m_PrefabInstance: {fileID: 8723016374022792065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2099808121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8723016372195681528, guid: 52011c00fa119c6438ae8d5c3b059b45,
@@ -337,6 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130288171}
   - component: {fileID: 2130288170}
+  - component: {fileID: 2130288172}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -421,6 +414,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2130288172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130288169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &2340564489160421940
 PrefabInstance:
   m_ObjectHideFlags: 0
