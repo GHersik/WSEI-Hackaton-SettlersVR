@@ -5,24 +5,28 @@ using UnityEngine.AI;
 
 public class Tatakae : MonoBehaviour
 {
-    private NavMeshAgent nma = null;
-    public NavMeshSurface nms;
-    public Transform village;
+    private NavMeshAgent _navMeshAgent = null;
+    [SerializeField] GameObject _navMeshSurface;
+    [SerializeField] GameObject village;
 
-    void Start()
+    private NavMeshSurface _navMesh;
+
+    void Awake()
     {
-        nma = this.GetComponent<NavMeshAgent>();
-        SetAttackDestination();
+        _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        _navMeshAgent.SetDestination(village.transform.position);
+        _navMesh = _navMeshSurface.GetComponent<NavMeshSurface>();
     }
 
-    private void Update()
-    {
-        SetAttackDestination();
-    }
+    //private void Update()
+    //{
+    //    SetAttackDestination();
+    //}
 
     private void SetAttackDestination()
     {
-        nma.destination = village.position;
+        _navMeshAgent.SetDestination(village.transform.position);
+        //nma.destination = village.transform.position;
     }
     void OnTriggerEnter(Collider other)
     {
